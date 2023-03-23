@@ -2,6 +2,10 @@
 
 This Tensorflow Model can classify Strabismus eyes and No Strabismus Eyes as normal by Image of eyes.
 
+## Documentation
+
+Please check out the [Documentation website](https://eyebouimpact.github.io/Documentation/) for more details.
+
 ## Model Description
 
 The model has 4 convolutional layers with max pooling between them. layers use 64, 96, 128 and 204 filters respectively. A flatten layer comes after these convolutional layers to flat the created 3d tensors. Then the extracted features gave to a 512 units fully connected layer followed by two other fully connected layers that has 256 and 128 units respectively.
