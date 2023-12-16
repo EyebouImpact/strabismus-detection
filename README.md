@@ -4,17 +4,25 @@ This Tensorflow Model can classify Strabismus eyes and No Strabismus Eyes as nor
 
 ## Model Description
 
-The model has 4 convolutional layers with max pooling between them. layers use 64, 96, 128 and 204 filters respectively. A flatten layer comes after these convolutional layers to flat the created 3d tensors. Then the extracted features gave to a 512 units fully connected layer followed by two other fully connected layers that has 256 and 128 units respectively.
+The model has 3 convolutional layers with max pooling between them. layers use 64, 96 and 128 filters respectively. A flatten layer comes after these convolutional layers to flat the created 3d tensors. Then the extracted features gave to a 256 units fully connected layer followed by another fully connected layer that has 128 units. After that a sigmoid fully connected layer is placed.
 
 ### Test Results
 
-Results on the test data after training:
+Results on the test data after training: (Normal Mode)
 
 | Measure           | Value |
 | ----------------- | ----- |
-| Balanced Accuracy | 70.8% |
-| Sensitivity       | 66.6% |
-| Specificity       | 75%   |
+| Balanced Accuracy | 82%   |
+| Sensitivity       | 86%   |
+| Specificity       | 77%   |
+
+Results on the test data after training: (Strict Mode) the threshold set to 0.285
+
+| Measure           | Value |
+| ----------------- | ----- |
+| Balanced Accuracy | 79%   |
+| Sensitivity       | 66%   |
+| Specificity       | 92%   |
 
 ### Model Input Data
 
@@ -30,10 +38,10 @@ The model gets 23:9 ratio image of eyes as input to detect strabismus. A sample 
 
 ## Usage Instructions
 
-You can use use this model in two ways.
+The model can be used in these two ways.
 
 1. Use presented function with python.
-2. Use model in your way.
+2. Use model in your way. (The trained model has been provided in “model” directory)
 
 ### Use presented function with python
 
